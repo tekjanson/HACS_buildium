@@ -254,6 +254,26 @@ async def watchdog_start(
         observer.schedule(WatchDogHandler(watchdog_q), pyscript_folder, recursive=True)
 
 
+class include(yaml.YAMLObject):
+    yaml_tag = "!include"
+
+    def __init__(self, val):
+        self.val = val
+
+    @classmethod
+    def from_yaml(cls, loader, node):
+        return cls(node.value)
+
+    @classmethod
+    def to_yaml(cls, dumper, data):
+        """
+        Convert a Python object to a representation node.
+        """
+        return dumper.represent_yaml_object(
+            cls.yaml_tag, data, cls, flow_style=cls.yaml_flow_style
+        )
+
+
 async def async_setup_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> bool:
     """Initialize the buildium_iot config entry."""
     global_ctx_only = None
@@ -287,57 +307,78 @@ async def async_setup_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> b
     config_yaml = "/config/configuration.yaml"
     pyscript_example = pyscript_folder + "/example.py"
     pyscript_property_unit = pyscript_folder + "/property_unit_pull.py"
-    with open(config_yaml, "r+") as file:
-        # The FullLoader parameter handles the conversion from YAML
-        # scalar values to Python the dictionary format
-        fruits_list = yaml.load(file, Loader=yaml.FullLoader)
+    if not await hass.async_add_executor_job(os.path.isdir, pyscript_folder):
 
-        # dict_file = {
-        #     "input_text": {
-        #         "client_id": {
-        #             "name": "client_id",
-        #             "initial": config_entry.data.get(CONF_BUILDIUM_SECRET, False),
-        #             "mode": "password",
-        #         },
-        #         "client_secret": {
-        #             "name": "client_secret",
-        #             "initial": config_entry.data.get(CONF_BUILDIUM_CLIENT_ID, False),
-        #         },
-        #     }
-        # }
-        fruits_list["input_text"]["client_id"] = {
-            "name": "client_id",
-            "initial": config_entry.data.get(CONF_BUILDIUM_CLIENT_ID, False),
-        }
-        fruits_list["input_text"]["client_secret"] = {
-            "name": "client_secret",
-            "initial": config_entry.data.get(CONF_BUILDIUM_SECRET, False),
-            "mode": "password",
-        }
-        # fruits_list.update(dict_file)
-        _LOGGER.info(fruits_list)
-        # file.write(yaml.safe_dump(fruits_list))
+        with open("config_yaml", "r") as sources:
+            lines = sources.readlines()
+        with open("config_yaml", "w") as sources:
+            for line in lines:
+                if "!includes" in line:
+                    _LOGGER.info("skipping!")
+                else:
+                    sources.write(line)
+        with open(config_yaml, "r+") as file:
+            # The FullLoader parameter handles the conversion from YAML
+            # scalar values to Python the dictionary format
 
-    with open(config_yaml, "w") as myfile:
-        myfile.write(yaml.safe_dump(fruits_list))
-        # yaml.safe_dump(fruits_list, file)
+            fruits_list = yaml.load(file, Loader=yaml.FullLoader)
+            if "input_text" in fruits_list:
+                _LOGGER.info("Key exists")
+            else:
+                fruits_list["input_text"] = {}
+            # dict_file = {
+            #     "input_text": {
+            #         "client_id": {
+            #             "name": "client_id",
+            #             "initial": config_entry.data.get(CONF_BUILDIUM_SECRET, False),
+            #             "mode": "password",
+            #         },
+            #         "client_secret": {
+            #             "name": "client_secret",
+            #             "initial": config_entry.data.get(CONF_BUILDIUM_CLIENT_ID, False),
+            #         },
+            #     }
+            # }
+            fruits_list["input_text"]["client_id"] = {
+                "name": "client_id",
+                "initial": config_entry.data.get(CONF_BUILDIUM_CLIENT_ID, False),
+            }
+            fruits_list["input_text"]["client_secret"] = {
+                "name": "client_secret",
+                "initial": config_entry.data.get(CONF_BUILDIUM_SECRET, False),
+                "mode": "password",
+            }
+            # fruits_list.update(dict_file)
+            _LOGGER.info(fruits_list)
+            # file.write(yaml.safe_dump(fruits_list))
 
-    # await hass.services.async_call(
-    #     "buildium_iot.reload",
-    #     "reload",
-    #     {},
-    # )
+        with open(config_yaml, "w") as myfile:
+            myfile.write(yaml.dump(fruits_list))
 
-    # hass.services.call(
-    #     "buildium_iot",
-    #     "property_unit_pull",
-    #     {
-    #         "buildium_client_id": config_entry.data.get(CONF_BUILDIUM_CLIENT_ID, False),
-    #         "buildium_client_secret": config_entry.data.get(
-    #             CONF_BUILDIUM_SECRET, False
-    #         ),
-    #     },
-    # )
+        with open(config_yaml, "a") as myfile:
+            myfile.write("\n")
+            myfile.write("group: !include groups.yaml\n")
+            myfile.write("automation: !include automations.yaml\n")
+            myfile.write("script: !include scripts.yaml\n")
+            myfile.write("scene: !include scenes.yaml\n")
+            # yaml.safe_dump(fruits_list, file)
+
+        # await hass.services.async_call(
+        #     "buildium_iot.reload",
+        #     "reload",
+        #     {},
+        # )
+
+        # hass.services.call(
+        #     "buildium_iot",
+        #     "property_unit_pull",
+        #     {
+        #         "buildium_client_id": config_entry.data.get(CONF_BUILDIUM_CLIENT_ID, False),
+        #         "buildium_client_secret": config_entry.data.get(
+        #             CONF_BUILDIUM_SECRET, False
+        #         ),
+        #     },
+        # )
 
     if not await hass.async_add_executor_job(os.path.isdir, pyscript_folder):
         _LOGGER.info("Unloading all scripts %s", pyscript_folder)

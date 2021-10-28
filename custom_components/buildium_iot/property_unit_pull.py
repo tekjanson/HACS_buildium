@@ -73,6 +73,15 @@ def property_unit_pull(
     # log.info(
     #     f"unit id : {Id}, PropertyId : {PropertyId}, BuildingName : {BuildingName}"
     # )
+    with open(config_yaml, "r") as sources:
+        lines = sources.readlines()
+    with open(config_yaml, "w") as sources:
+        for line in lines:
+            if "!include" in line:
+                _LOGGER.info("skipping!")
+            else:
+                sources.write(line)
+
     with open(config_yaml, "r+") as file:
         # The FullLoader parameter handles the conversion from YAML
         # scalar values to Python the dictionary format
@@ -103,3 +112,9 @@ def property_unit_pull(
     with open(config_yaml, "w") as myfile:
         myfile.write(yaml.safe_dump(fruits_list))
         # yaml.safe_dump(fruits_list, file)
+
+    with open(config_yaml, "a") as myfile:
+        myfile.write("group: !include groups.yaml\n")
+        myfile.write("automation: !include automations.yaml\n")
+        myfile.write("script: !include scripts.yaml\n")
+        myfile.write("scene: !include scenes.yaml\n")
