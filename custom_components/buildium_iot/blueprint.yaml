@@ -1,0 +1,70 @@
+blueprint:
+  name: Buildium_IoT
+  description: leak detection magic
+  domain: automation
+  input:
+    input_number_unit:
+      name: unit
+      selector:
+        entity:
+          domain: input_number
+    input_number_property:
+      name: property
+      selector:
+        entity:
+          domain: input_number
+    client_id:
+      name: client_id
+      selector:
+        entity:
+          domain: input_text
+    client_secret:
+      name: client_secret
+      selector:
+        entity:
+          domain: input_text
+    leak_sensor_contact:
+      name: leak sensor
+      selector:
+        entity:
+          domain: binary_sensor
+          device_class: door
+
+
+# If motion is detected within the delay,
+# we restart the script.
+
+trigger:
+  - platform: state
+    entity_id: !input leak_sensor_contact
+    from: "off"
+    to: "on"
+
+variables:
+  client_id_states: !input client_id
+  client_id: "{{ states[client_id_states].state }}"
+
+  client_secret_states: !input client_secret
+  client_secret: "{{ states[client_secret_states].state  }}"
+
+  input_number_unit_states: !input input_number_unit
+  input_number_unit: "{{ (states[input_number_unit_states].state | int)  }}"
+
+  input_number_property_states: !input input_number_property
+  input_number_property: "{{ (states[input_number_property_states].state | int) }}"
+
+
+action:
+  service: buildium_iot.hello_world
+  data:
+    action: 1
+    id: 2
+    unit: " {{ input_number_unit }} "
+    property: "{{ input_number_property }}"
+    Title: HOME ASSISTANT GOT A LEAK
+    description: >-
+      HEY MAN YOU GOT A LEAK, YOU MIGHT WANT TO LOOK INTO THIS. ITS ALL CAPS
+      BECAUSE THIS IS IMPORTANT
+    priority: Normal
+    buildium_client_id: "{{ client_id }}"
+    buildium_client_secret: "{{ client_secret }}"

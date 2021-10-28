@@ -1,0 +1,10 @@
+{
+  "_template": "gh:oncleben31/cookiecutter-homeassistant-custom-component",
+  "class_name_prefix": "BuildiumIot",
+  "domain_name": "buildium_iot",
+  "friendly_name": "buildium_IoT",
+  "github_user": "tekjanson",
+  "project_name": "buildium-iot",
+  "test_suite": "yes",
+  "version": "0.0.1"
+}

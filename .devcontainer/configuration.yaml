@@ -1,0 +1,714 @@
+default_config: null
+input_number:
+  property_00129_kub_mission:
+    initial: 51981
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_00129_kub_mission
+    step: 1
+  property_01175_ubaldo_hill:
+    initial: 51957
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_01175_ubaldo_hill
+    step: 1
+  property_013_thompson_row:
+    initial: 51951
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_013_thompson_row
+    step: 1
+  property_0754_rogelio_manor:
+    initial: 51987
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_0754_rogelio_manor
+    step: 1
+  property_12690_jacobs_street:
+    initial: 51966
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_12690_jacobs_street
+    step: 1
+  property_150_flatley_drive:
+    initial: 51996
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_150_flatley_drive
+    step: 1
+  property_1696_lubowitz_forge:
+    initial: 51968
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_1696_lubowitz_forge
+    step: 1
+  property_1701_arch_ridge:
+    initial: 51980
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_1701_arch_ridge
+    step: 1
+  property_23313_krystal_fort:
+    initial: 51963
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_23313_krystal_fort
+    step: 1
+  property_2612_hintz_summit:
+    initial: 52007
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_2612_hintz_summit
+    step: 1
+  property_26463_kayley_course:
+    initial: 51971
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_26463_kayley_course
+    step: 1
+  property_2764_monica_streets:
+    initial: 52005
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_2764_monica_streets
+    step: 1
+  property_27_newman_road:
+    initial: 51899
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_27_newman_road
+    step: 1
+  property_28387_taya_neck:
+    initial: 51999
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_28387_taya_neck
+    step: 1
+  property_30425_nat_highway:
+    initial: 51950
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_30425_nat_highway
+    step: 1
+  property_3494_grant_drive:
+    initial: 51993
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_3494_grant_drive
+    step: 1
+  property_35233_shanon_villages:
+    initial: 51953
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_35233_shanon_villages
+    step: 1
+  property_3773_jewess_springs:
+    initial: 51960
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_3773_jewess_springs
+    step: 1
+  property_3895_ellis_forest:
+    initial: 51975
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_3895_ellis_forest
+    step: 1
+  property_427_edythe_lights:
+    initial: 52016
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_427_edythe_lights
+    step: 1
+  property_460_cordell_gardens:
+    initial: 51974
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_460_cordell_gardens
+    step: 1
+  property_4733_stanton_ford:
+    initial: 51986
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_4733_stanton_ford
+    step: 1
+  property_4979_kaylee_canyon:
+    initial: 52019
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_4979_kaylee_canyon
+    step: 1
+  property_5101_ruecker_mountains:
+    initial: 52002
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_5101_ruecker_mountains
+    step: 1
+  property_5162_considine_stream:
+    initial: 52017
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_5162_considine_stream
+    step: 1
+  property_5387_schumm_crest:
+    initial: 52008
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_5387_schumm_crest
+    step: 1
+  property_547_ullrich_causeway:
+    initial: 52010
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_547_ullrich_causeway
+    step: 1
+  property_581_bechtelar_stravenue:
+    initial: 51956
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_581_bechtelar_stravenue
+    step: 1
+  property_6090_o_keefe_cape:
+    initial: 52022
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_6090_o_keefe_cape
+    step: 1
+  property_611_parisian_glen:
+    initial: 52004
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_611_parisian_glen
+    step: 1
+  property_63706_schneider_street:
+    initial: 51954
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_63706_schneider_street
+    step: 1
+  property_638_hermann_roads:
+    initial: 51977
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_638_hermann_roads
+    step: 1
+  property_667_percival_lock:
+    initial: 51962
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_667_percival_lock
+    step: 1
+  property_684_schuyler_lake:
+    initial: 52011
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_684_schuyler_lake
+    step: 1
+  property_693_jimmy_fork:
+    initial: 51989
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_693_jimmy_fork
+    step: 1
+  property_7088_zane_mountain:
+    initial: 51995
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_7088_zane_mountain
+    step: 1
+  property_72992_hettie_divide:
+    initial: 51978
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_72992_hettie_divide
+    step: 1
+  property_750_rogahn_rest:
+    initial: 51969
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_750_rogahn_rest
+    step: 1
+  property_80364_eloy_plaza:
+    initial: 51972
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_80364_eloy_plaza
+    step: 1
+  property_804_green_well:
+    initial: 52001
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_804_green_well
+    step: 1
+  property_81159_vince_fork:
+    initial: 52013
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_81159_vince_fork
+    step: 1
+  property_8122_olson_dale:
+    initial: 51959
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_8122_olson_dale
+    step: 1
+  property_83940_lowe_park:
+    initial: 51983
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_83940_lowe_park
+    step: 1
+  property_898_kenya_station:
+    initial: 51992
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_898_kenya_station
+    step: 1
+  property_9062_botsford_cape:
+    initial: 51984
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_9062_botsford_cape
+    step: 1
+  property_906_bernhard_roads:
+    initial: 52014
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_906_bernhard_roads
+    step: 1
+  property_9075_reichel_key:
+    initial: 51998
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_9075_reichel_key
+    step: 1
+  property_9193_dominic_shoal:
+    initial: 52020
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_9193_dominic_shoal
+    step: 1
+  property_9353_lockman_mountain:
+    initial: 51965
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_9353_lockman_mountain
+    step: 1
+  property_9712_baumbach_port:
+    initial: 51990
+    max: 100000000
+    min: -10000
+    mode: box
+    name: property_9712_baumbach_port
+    step: 1
+  unit_00129_kub_mission:
+    initial: 280177
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_00129_kub_mission
+    step: 1
+  unit_01175_ubaldo_hill:
+    initial: 280161
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_01175_ubaldo_hill
+    step: 1
+  unit_013_thompson_row:
+    initial: 280157
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_013_thompson_row
+    step: 1
+  unit_0754_rogelio_manor:
+    initial: 280181
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_0754_rogelio_manor
+    step: 1
+  unit_12690_jacobs_street:
+    initial: 280167
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_12690_jacobs_street
+    step: 1
+  unit_150_flatley_drive:
+    initial: 280187
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_150_flatley_drive
+    step: 1
+  unit_1696_lubowitz_forge:
+    initial: 280168
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_1696_lubowitz_forge
+    step: 1
+  unit_1701_arch_ridge:
+    initial: 280176
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_1701_arch_ridge
+    step: 1
+  unit_23313_krystal_fort:
+    initial: 280165
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_23313_krystal_fort
+    step: 1
+  unit_2612_hintz_summit:
+    initial: 280194
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_2612_hintz_summit
+    step: 1
+  unit_26463_kayley_course:
+    initial: 280170
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_26463_kayley_course
+    step: 1
+  unit_2764_monica_streets:
+    initial: 280193
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_2764_monica_streets
+    step: 1
+  unit_27_newman_road:
+    initial: 279939
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_27_newman_road
+    step: 1
+  unit_28387_taya_neck:
+    initial: 280189
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_28387_taya_neck
+    step: 1
+  unit_30425_nat_highway:
+    initial: 280156
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_30425_nat_highway
+    step: 1
+  unit_3494_grant_drive:
+    initial: 280185
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_3494_grant_drive
+    step: 1
+  unit_35233_shanon_villages:
+    initial: 280158
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_35233_shanon_villages
+    step: 1
+  unit_3773_jewess_springs:
+    initial: 280163
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_3773_jewess_springs
+    step: 1
+  unit_3895_ellis_forest:
+    initial: 280173
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_3895_ellis_forest
+    step: 1
+  unit_427_edythe_lights:
+    initial: 280200
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_427_edythe_lights
+    step: 1
+  unit_460_cordell_gardens:
+    initial: 280172
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_460_cordell_gardens
+    step: 1
+  unit_4733_stanton_ford:
+    initial: 280180
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_4733_stanton_ford
+    step: 1
+  unit_4979_kaylee_canyon:
+    initial: 280202
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_4979_kaylee_canyon
+    step: 1
+  unit_5101_ruecker_mountains:
+    initial: 280191
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_5101_ruecker_mountains
+    step: 1
+  unit_5162_considine_stream:
+    initial: 280201
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_5162_considine_stream
+    step: 1
+  unit_5387_schumm_crest:
+    initial: 280195
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_5387_schumm_crest
+    step: 1
+  unit_547_ullrich_causeway:
+    initial: 280196
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_547_ullrich_causeway
+    step: 1
+  unit_581_bechtelar_stravenue:
+    initial: 280160
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_581_bechtelar_stravenue
+    step: 1
+  unit_6090_o_keefe_cape:
+    initial: 280204
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_6090_o_keefe_cape
+    step: 1
+  unit_611_parisian_glen:
+    initial: 280192
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_611_parisian_glen
+    step: 1
+  unit_63706_schneider_street:
+    initial: 280159
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_63706_schneider_street
+    step: 1
+  unit_638_hermann_roads:
+    initial: 280174
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_638_hermann_roads
+    step: 1
+  unit_667_percival_lock:
+    initial: 280164
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_667_percival_lock
+    step: 1
+  unit_684_schuyler_lake:
+    initial: 280197
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_684_schuyler_lake
+    step: 1
+  unit_693_jimmy_fork:
+    initial: 280182
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_693_jimmy_fork
+    step: 1
+  unit_7088_zane_mountain:
+    initial: 280186
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_7088_zane_mountain
+    step: 1
+  unit_72992_hettie_divide:
+    initial: 280175
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_72992_hettie_divide
+    step: 1
+  unit_750_rogahn_rest:
+    initial: 280169
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_750_rogahn_rest
+    step: 1
+  unit_80364_eloy_plaza:
+    initial: 280171
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_80364_eloy_plaza
+    step: 1
+  unit_804_green_well:
+    initial: 280190
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_804_green_well
+    step: 1
+  unit_81159_vince_fork:
+    initial: 280198
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_81159_vince_fork
+    step: 1
+  unit_8122_olson_dale:
+    initial: 280162
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_8122_olson_dale
+    step: 1
+  unit_83940_lowe_park:
+    initial: 280178
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_83940_lowe_park
+    step: 1
+  unit_898_kenya_station:
+    initial: 280184
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_898_kenya_station
+    step: 1
+  unit_9062_botsford_cape:
+    initial: 280179
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_9062_botsford_cape
+    step: 1
+  unit_906_bernhard_roads:
+    initial: 280199
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_906_bernhard_roads
+    step: 1
+  unit_9075_reichel_key:
+    initial: 280188
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_9075_reichel_key
+    step: 1
+  unit_9193_dominic_shoal:
+    initial: 280203
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_9193_dominic_shoal
+    step: 1
+  unit_9353_lockman_mountain:
+    initial: 280166
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_9353_lockman_mountain
+    step: 1
+  unit_9712_baumbach_port:
+    initial: 280183
+    max: 100000000
+    min: -10000
+    mode: box
+    name: unit_9712_baumbach_port
+    step: 1
+input_text:
+  client_id:
+    initial: 1ef18add-629d-4f93-8121-a0d5f4fa7a1b
+    name: client_id
+  client_secret:
+    initial: zfe1szl8sbYH1z6YybbqFEYLPaJ0BtS8x6R9i3eUmNY=
+    mode: password
+    name: client_secret
+logger:
+  default: info
+  logs:
+    custom_components.buildium_iot: debug
