@@ -309,9 +309,9 @@ async def async_setup_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> b
     pyscript_property_unit = pyscript_folder + "/property_unit_pull.py"
     if not await hass.async_add_executor_job(os.path.isdir, pyscript_folder):
 
-        with open("config_yaml", "r") as sources:
+        with open(config_yaml, "r") as sources:
             lines = sources.readlines()
-        with open("config_yaml", "w") as sources:
+        with open(config_yaml, "w") as sources:
             for line in lines:
                 if "!includes" in line:
                     _LOGGER.info("skipping!")
