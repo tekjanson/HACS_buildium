@@ -78,7 +78,7 @@ def property_unit_pull(
     with open(config_yaml, "w") as sources:
         for line in lines:
             if "!include" in line:
-                _LOGGER.info("skipping!")
+                log.info("skipping!")
             else:
                 sources.write(line)
 

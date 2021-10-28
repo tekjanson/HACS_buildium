@@ -313,7 +313,7 @@ async def async_setup_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> b
             lines = sources.readlines()
         with open(config_yaml, "w") as sources:
             for line in lines:
-                if "!includes" in line:
+                if "!include" in line:
                     _LOGGER.info("skipping!")
                 else:
                     sources.write(line)
