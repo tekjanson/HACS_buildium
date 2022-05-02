@@ -712,3 +712,8 @@ logger:
   default: info
   logs:
     custom_components.buildium_iot: debug
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
